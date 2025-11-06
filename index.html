@@ -2,10 +2,10 @@
 // Start the session at the very beginning
 session_start();
 // Database configuration - NEW DATABASE NAME
-$host = 'localhost';
-$dbname = 'stii_inventory';
-$username = 'root';
-$password = '';
+$host = 'sql205.infinityfree.com';
+$dbname = 'if0_40340582_stii_inventory';
+$username = 'if0_40340582';
+$password = 'neverdie0514';
 // First, connect without selecting database to check if it exists
 try {
     $pdo_temp = new PDO("mysql:host=$host", $username, $password);
@@ -4135,8 +4135,7 @@ if (isset($_SESSION['user_id'])) {
                     <h3>Developer</h3>
                     <div class="developer-info">
                         <div class="developer">
-                            <h4>Jagdish Love</h4>
-                            <p>Developer</p>
+                            <h4>Jagdish Love L. Berondo</h4>
                             <div class="social-links">
                                 <a href="https://www.facebook.com/share/1GBkQWxisy/" class="social-link" target="_blank" title="Facebook">
                                     <i class="fab fa-facebook-f" ></i>
@@ -4391,6 +4390,18 @@ if (isset($_SESSION['user_id'])) {
     </div>
     <?php endif; ?>
     <script>
+        // NEW: Auto-close sidebar when navigation links are clicked on mobile devices
+const sidebarLinks = document.querySelectorAll('.sidebar-nav-link');
+sidebarLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        // Check if it's a mobile device (screen width <= 768px)
+        if (window.innerWidth <= 768) {
+            sidebar.classList.remove('active');
+            document.body.classList.remove('sidebar-open');
+            localStorage.setItem('sidebarOpen', false);
+        }
+    });
+});
         document.addEventListener('DOMContentLoaded', function() {
             // NEW: Sidebar Toggle Functionality
             const sidebar = document.getElementById('sidebar');
@@ -4660,4 +4671,4 @@ if (isset($_SESSION['user_id'])) {
         });
     </script>
 </body>
-</html>v
+</html>
