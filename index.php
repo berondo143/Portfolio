@@ -1,19 +1,3 @@
-<?php
-// Portfolio Backend - Contact Form Handler
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_submit'])) {
-    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
-    
-    // Simple validation
-    if (!empty($name) && !empty($email) && !empty($message) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        // In a real implementation, you would send an email here
-        $contact_success = "Thank you for your message, $name! I'll get back to you soon.";
-    } else {
-        $contact_error = "Please fill in all fields correctly.";
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1075,3 +1059,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_submit'])) {
     </script>
 </body>
 </html>
+
