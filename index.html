@@ -29,7 +29,7 @@
             overflow-x: hidden;
         }
         
-        /* Animated background */
+        /* Animated background - fixed positioning */
         .animated-bg {
             position: fixed;
             top: 0;
@@ -162,6 +162,8 @@
             padding: 100px 20px;
             max-width: 1200px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
         
         #about {
@@ -171,6 +173,7 @@
             backdrop-filter: blur(10px);
             position: relative;
             overflow: hidden;
+            margin-top: 40px;
         }
         
         #about:before {
@@ -209,6 +212,7 @@
         
         #skills {
             background: transparent;
+            margin-top: 40px;
         }
         
         #skills ul {
@@ -258,6 +262,7 @@
             backdrop-filter: blur(10px);
             position: relative;
             overflow: hidden;
+            margin-top: 40px;
         }
         
         #projects:before {
@@ -337,64 +342,7 @@
         
         #contact {
             background: transparent;
-        }
-        
-        #contact form {
-            display: flex;
-            flex-direction: column;
-            max-width: 600px;
-            margin: 0 auto 40px;
-        }
-        
-        #contact input, #contact textarea {
-            margin: 10px 0;
-            padding: 15px;
-            border: none;
-            border-radius: 8px;
-            background: rgba(40, 40, 40, 0.8);
-            color: var(--light);
-            font-size: 1em;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: border 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        #contact input:focus, #contact textarea:focus {
-            outline: none;
-            border: 1px solid var(--primary);
-            box-shadow: 0 0 10px rgba(255, 77, 128, 0.3);
-        }
-        
-        #contact button {
-            background: var(--gradient-1);
-            color: var(--light);
-            border: none;
-            padding: 15px;
-            cursor: pointer;
-            font-weight: 600;
-            border-radius: 8px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        #contact button:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
-        }
-        
-        #contact button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(255, 77, 128, 0.4);
-        }
-        
-        #contact button:hover:before {
-            left: 100%;
+            margin-top: 40px;
         }
         
         .contact-info {
@@ -444,6 +392,7 @@
             background: #000000;
             font-size: 0.9em;
             position: relative;
+            margin-top: 40px;
         }
         
         footer:before {
@@ -612,13 +561,6 @@
     </footer>
     
     <script>
-        // Form submission handler
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Message sent! (This is a demo)');
-            // In a real backend setup, you'd use PHP or JS to handle form submission, e.g., via email API or server-side script.
-        });
-        
         // Scroll animation
         document.addEventListener('DOMContentLoaded', function() {
             const fadeElements = document.querySelectorAll('.fade-in');
