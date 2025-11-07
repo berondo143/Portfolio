@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jagdish Love Berondo - Web Developer Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -26,14 +26,16 @@
             box-sizing: border-box;
         }
         
+        html {
+            scroll-behavior: smooth;
+        }
+        
         body {
             font-family: 'Poppins', sans-serif;
             background: var(--gradient-bg);
             color: var(--light);
             line-height: 1.6;
-            scroll-behavior: smooth;
             overflow-x: hidden;
-            position: relative;
             min-height: 100vh;
         }
         
@@ -72,95 +74,12 @@
             }
         }
         
-        /* Glitch effect for header */
-        .glitch-container {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .glitch {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .glitch::before,
-        .glitch::after {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .glitch::before {
-            left: 2px;
-            text-shadow: -2px 0 #FF4D80;
-            clip: rect(44px, 450px, 56px, 0);
-            animation: glitch-anim 5s infinite linear alternate-reverse;
-        }
-        
-        .glitch::after {
-            left: -2px;
-            text-shadow: -2px 0 #00D4FF;
-            clip: rect(44px, 450px, 56px, 0);
-            animation: glitch-anim2 5s infinite linear alternate-reverse;
-        }
-        
-        @keyframes glitch-anim {
-            0% { clip: rect(32px, 9999px, 78px, 0); }
-            5% { clip: rect(2px, 9999px, 26px, 0); }
-            10% { clip: rect(85px, 9999px, 64px, 0); }
-            15% { clip: rect(64px, 9999px, 10px, 0); }
-            20% { clip: rect(37px, 9999px, 24px, 0); }
-            25% { clip: rect(14px, 9999px, 59px, 0); }
-            30% { clip: rect(36px, 9999px, 30px, 0); }
-            35% { clip: rect(69px, 9999px, 44px, 0); }
-            40% { clip: rect(38px, 9999px, 65px, 0); }
-            45% { clip: rect(30px, 9999px, 68px, 0); }
-            50% { clip: rect(12px, 9999px, 86px, 0); }
-            55% { clip: rect(89px, 9999px, 38px, 0); }
-            60% { clip: rect(66px, 9999px, 83px, 0); }
-            65% { clip: rect(25px, 9999px, 84px, 0); }
-            70% { clip: rect(33px, 9999px, 48px, 0); }
-            75% { clip: rect(51px, 9999px, 41px, 0); }
-            80% { clip: rect(29px, 9999px, 76px, 0); }
-            85% { clip: rect(83px, 9999px, 37px, 0); }
-            90% { clip: rect(44px, 9999px, 59px, 0); }
-            95% { clip: rect(21px, 9999px, 33px, 0); }
-            100% { clip: rect(58px, 9999px, 72px, 0); }
-        }
-        
-        @keyframes glitch-anim2 {
-            0% { clip: rect(12px, 9999px, 58px, 0); }
-            5% { clip: rect(33px, 9999px, 72px, 0); }
-            10% { clip: rect(66px, 9999px, 42px, 0); }
-            15% { clip: rect(23px, 9999px, 89px, 0); }
-            20% { clip: rect(45px, 9999px, 27px, 0); }
-            25% { clip: rect(81px, 9999px, 10px, 0); }
-            30% { clip: rect(19px, 9999px, 65px, 0); }
-            35% { clip: rect(52px, 9999px, 36px, 0); }
-            40% { clip: rect(74px, 9999px, 21px, 0); }
-            45% { clip: rect(28px, 9999px, 55px, 0); }
-            50% { clip: rect(63px, 9999px, 17px, 0); }
-            55% { clip: rect(39px, 9999px, 84px, 0); }
-            60% { clip: rect(5px, 9999px, 48px, 0); }
-            65% { clip: rect(71px, 9999px, 29px, 0); }
-            70% { clip: rect(44px, 9999px, 76px, 0); }
-            75% { clip: rect(16px, 9999px, 62px, 0); }
-            80% { clip: rect(57px, 9999px, 33px, 0); }
-            85% { clip: rect(25px, 9999px, 79px, 0); }
-            90% { clip: rect(68px, 9999px, 14px, 0); }
-            95% { clip: rect(37px, 9999px, 51px, 0); }
-            100% { clip: rect(82px, 9999px, 26px, 0); }
-        }
-        
-        /* Sticky navigation with blur effect */
+        /* Navigation */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(18, 18, 18, 0.8);
+            background: rgba(18, 18, 18, 0.9);
             padding: 20px 0;
             text-align: center;
             z-index: 1000;
@@ -206,7 +125,7 @@
             width: 100%;
         }
         
-        /* Hero section with parallax effect */
+        /* Header/Hero Section */
         header {
             position: relative;
             padding: 200px 20px 150px;
@@ -214,37 +133,11 @@
             overflow: hidden;
             background: linear-gradient(135deg, rgba(108, 99, 255, 0.2), rgba(255, 77, 128, 0.2));
             clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-        }
-        
-        .parallax-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="%236C63FF" points="0,1000 1000,0 1000,1000"/><polygon fill="%2300D4FF" points="0,0 0,1000 1000,0"/></svg>') no-repeat center center;
-            background-size: cover;
-            opacity: 0.1;
-            transform: translateZ(-1px) scale(2);
-        }
-        
-        header h1 {
-            font-size: 4.5em;
-            margin: 20px 0 10px;
-            background: linear-gradient(to right, #ffffff, #FFD700, #FF4D80);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            letter-spacing: 2px;
-        }
-        
-        header p {
-            font-size: 1.8em;
-            margin: 20px 0 30px;
-            color: #ffffff;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            font-weight: 300;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         
         .profile-img-container {
@@ -258,8 +151,9 @@
             border: 4px solid transparent;
             background: var(--gradient-1) padding-box, var(--gradient-1) border-box;
             box-shadow: 0 10px 30px rgba(255, 77, 128, 0.5);
-            max-width: 280px;
-            height: auto;
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
             transition: all 0.5s ease;
             position: relative;
             z-index: 2;
@@ -290,7 +184,26 @@
             50% { opacity: 0.7; transform: translate(-50%, -50%) scale(1.1); }
         }
         
-        /* Sections with glass morphism effect */
+        header h1 {
+            font-size: 4.5em;
+            margin: 20px 0 10px;
+            background: linear-gradient(to right, #ffffff, #FFD700, #FF4D80);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            letter-spacing: 2px;
+        }
+        
+        header p {
+            font-size: 1.8em;
+            margin: 20px 0 30px;
+            color: #ffffff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            font-weight: 300;
+            max-width: 800px;
+        }
+        
+        /* Sections */
         section {
             padding: 120px 20px;
             max-width: 1200px;
@@ -355,10 +268,6 @@
         }
         
         /* Skills section with animated bars */
-        #skills {
-            padding-top: 80px;
-        }
-        
         .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -405,10 +314,6 @@
         }
         
         /* Projects section with 3D card effect */
-        #projects {
-            padding-top: 80px;
-        }
-        
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -424,8 +329,6 @@
             transition: all 0.5s ease;
             position: relative;
             border: 1px solid rgba(255, 255, 255, 0.05);
-            transform-style: preserve-3d;
-            perspective: 1000px;
         }
         
         .project-card:hover {
@@ -471,10 +374,6 @@
         }
         
         /* Contact section */
-        #contact {
-            padding-top: 80px;
-        }
-        
         .contact-container {
             display: flex;
             flex-wrap: wrap;
@@ -552,13 +451,7 @@
             background: var(--gradient-1);
         }
         
-        /* Buttons with magnetic effect */
-        .magnetic-btn {
-            position: relative;
-            display: inline-block;
-            overflow: hidden;
-        }
-        
+        /* Buttons */
         .learn-more-btn {
             background: var(--gradient-1);
             color: var(--light);
@@ -677,7 +570,8 @@
             }
             
             .profile-img {
-                max-width: 220px;
+                width: 220px;
+                height: 220px;
             }
             
             .profile-glow {
@@ -709,7 +603,8 @@
             }
             
             .profile-img {
-                max-width: 180px;
+                width: 180px;
+                height: 180px;
             }
             
             .profile-glow {
@@ -729,12 +624,6 @@
         
         /* Fade-in animation for sections */
         .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-        
-        .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
@@ -755,18 +644,14 @@
     
     <!-- Header/Hero Section -->
     <header id="home">
-        <div class="parallax-bg"></div>
         <div class="profile-img-container">
             <div class="profile-glow"></div>
+            <!-- Using a placeholder image since we don't have the actual profile image -->
             <img src="images/ss.jpg" class="profile-img" alt="Jagdish Love Berondo Profile">
         </div>
-        <div class="glitch-container">
-            <h1 class="glitch" data-text="Jagdish Love Berondo">Jagdish Love Berondo</h1>
-        </div>
+        <h1>Jagdish Love Berondo</h1>
         <p>Web Developer | Creating Modern, Responsive Websites and Web Applications</p>
-        <div class="magnetic-btn">
-            <button class="learn-more-btn" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Explore My Work</button>
-        </div>
+        <button class="learn-more-btn" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Explore My Work</button>
     </header>
     
     <!-- About Section -->
@@ -844,13 +729,6 @@
                     <div class="project-content">
                         <h3>Portfolio Website</h3>
                         <p>A responsive and visually stunning portfolio website showcasing my skills and projects. Built with modern CSS techniques and smooth animations.</p>
-                        <a href="#" class="project-link">View Project</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>E-commerce Platform</h3>
-                        <p>A full-featured e-commerce solution with product catalog, shopping cart, user accounts, and payment integration.</p>
                         <a href="#" class="project-link">View Project</a>
                     </div>
                 </div>
@@ -978,33 +856,6 @@
             );
         }
         
-        // Scroll animation for sections
-        document.addEventListener('DOMContentLoaded', function() {
-            const fadeElements = document.querySelectorAll('.fade-in');
-            
-            const fadeInOnScroll = function() {
-                fadeElements.forEach(element => {
-                    const elementTop = element.getBoundingClientRect().top;
-                    const elementVisible = 150;
-                    
-                    if (elementTop < window.innerHeight - elementVisible) {
-                        element.classList.add('visible');
-                    }
-                });
-                
-                animateSkillBars();
-            };
-            
-            // Initial check
-            fadeInOnScroll();
-            
-            // Check on scroll
-            window.addEventListener('scroll', fadeInOnScroll);
-            
-            // Create particles
-            createParticles();
-        });
-        
         // Smooth scrolling for navigation links
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -1022,24 +873,16 @@
             });
         });
         
-        // Magnetic button effect
-        document.querySelectorAll('.magnetic-btn').forEach(btn => {
-            btn.addEventListener('mousemove', function(e) {
-                const x = e.pageX - this.offsetLeft;
-                const y = e.pageY - this.offsetTop;
-                
-                const centerX = this.offsetWidth / 2;
-                const centerY = this.offsetHeight / 2;
-                
-                const deltaX = (x - centerX) / centerX * 10;
-                const deltaY = (y - centerY) / centerY * 10;
-                
-                this.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
-            });
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create particles
+            createParticles();
             
-            btn.addEventListener('mouseleave', function() {
-                this.style.transform = 'translate(0, 0)';
-            });
+            // Animate skill bars initially
+            animateSkillBars();
+            
+            // Animate skill bars on scroll
+            window.addEventListener('scroll', animateSkillBars);
         });
     </script>
 </body>
